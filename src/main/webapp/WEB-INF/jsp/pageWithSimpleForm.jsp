@@ -44,7 +44,7 @@
         </form>
         <div>
             <table>
-                <c:forEach var="user" items="${users}">
+                <c:forEach var="user" items="${users}"> /* how set " " ? */
                     <tr>
                         <td>${user.firstName}</td>
                         <td>${user.lastName}</td>
