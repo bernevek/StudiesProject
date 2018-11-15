@@ -36,7 +36,9 @@
     <div class="starter-template">
         <form action="http://localhost:8080/simpleForm" method="post">
             <div>
-                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="firstName" placeholder="First name">
+                <input type="text" name="lastName" placeholder="Last name">
+                <input type="text" name="age" placeholder="Age">
                 <button type="submit" class="btn btn-primary">Save</button>
             </div>
         </form>
@@ -44,10 +46,14 @@
             <table>
                 <c:forEach var="user" items="${users}">
                     <tr>
-                        <td>${user.name}</td>
+                        <td>${user.firstName}</td>
+                        <td>${user.lastName}</td>
+                        <td>${user.age}</td>
                     </tr>
+
                 </c:forEach>
             </table>
+
         </div>
 
     </div>

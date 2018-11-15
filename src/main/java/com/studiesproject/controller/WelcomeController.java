@@ -18,7 +18,7 @@ public class WelcomeController {
     private WelcomeService welcomeService;
 
     // inject via application.properties
-    @Value("${welcome.message:test}")
+    @Value("Hello, this is first program")
     private String message = "Hello World";
 
     @GetMapping("/")
@@ -34,10 +34,11 @@ public class WelcomeController {
     }
 
     @PostMapping(value = "/simpleForm")
-    public String simpleFormProcessing(Map<String, Object> model, @RequestParam Map<String, String> user) {
-        welcomeService.processNameForm(new User(user.get("name")));
+    public String simpleFormProcessingFirst(Map<String, Object> model, @RequestParam Map<String, String> user) {
+        welcomeService.processForm(new User(user.get("firstName"), user.get("lastName"), user.get("age")));
         model.put("users", welcomeService.getUsers());
         return "pageWithSimpleForm";
     }
+
 
 }

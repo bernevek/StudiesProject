@@ -13,11 +13,10 @@ public class WelcomeServiceImpl implements WelcomeService {
     private List<User> users = new LinkedList<>();
 
     @Override
-    public List<User> processNameForm(User user) {
+    public List<User> processForm(User user) {
         users.add(user);
         return users;
     }
-
     @Override
     public List<User> getUsers() {
         return users;
